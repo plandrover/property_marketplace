@@ -1,0 +1,38 @@
+.pod{
+    background-color: green;
+    width: 100%;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+
+p.key.token {
+    color: red;
+}
+
+.nav-item {
+
+    color: red;
+
+    transition: color 2s;
+
+}
+.nav-item:hover{
+    color: blue;
+}
+
+.container-fluid{
+    /*background-color: #DC143C;*/
+    /*border: 2px solid blue;*/
+}
+.colo{
+    border: 2px solid blue;
+}
+.top{
+    height: 400px;
+}
+.lil-left{
+    height:150px
+}
+.big-left{
+height: 300px;
+}

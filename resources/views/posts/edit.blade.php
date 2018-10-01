@@ -84,11 +84,11 @@
         </select>
     </div>
         <div class="form-group">
-            <label for="price">Price</label>
+            <label for="price">Price  £</label>
             <input type="number" name="price" placeholder="£100000" value="{{$post->price}}">
         </div>
         <div class="form-group">
-            <label for="commission">Sourcer commission</label>
+            <label for="commission">Sourcer commission  £</label>
             <input type="number" name="commission" placeholder="£5000" value="{{$post->commission}}">
         </div>
         <div class="form-group">
@@ -97,14 +97,14 @@
         </div>
 
 
-        <input type="submit" name="submit" value="UPDATE">
+        <input type="submit" name="submit" value="UPDATE" onclick="return confirm('Please confirm to update your listing')">
 
     </form>
 
     <form method="post" action="/posts/{{$post->id}}">
         {{csrf_field()}}
         <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="DELETE">
+        <input type="submit" value="DELETE" onclick="return confirm('Are you sure you want to delete this listing?')">
         
     </form>
 

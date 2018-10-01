@@ -157,11 +157,7 @@ Route::get('/delete', function(){
     $post-> delete();
 });
 
-Route::get('/delete2', function(){
 
-    Post::destroy([3.4,5]);
-    Post::where('is_admin',0)->delete();
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -205,7 +201,28 @@ Route::get('/usersposts', function ()
 
     $posts = Post::where('user_id','=',Auth::user()->id)->get();
 
+    return view('posts/index', ['posts' => $posts]);
+
+})->name('usersPosts');
+Route::get('/usersposts/{user_id}', function ($user_id)
+{
+
+    $posts = Post::where('user_id','=',$user_id)->get();
 
     return view('posts/index', ['posts' => $posts]);
 
 })->name('usersPosts');
+
+
+
+//Route::get('/seeusersposts', function ()
+//{
+//
+//    $posts = User::find(user_id)->posts;
+//
+//    return view('posts/index', ['posts' => $posts]);
+//
+//})->name('usersPosts');
+
+
+

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1>Create Post</h1>
+    <h2>Create Post</h2>
 
 
     {{--<form  method="post" action="/posts" style="color: black">--}}
@@ -14,7 +14,7 @@
         {{--{{csrf_field()}}--}}
 
         {{--<label for="houseNumber">House Number</label>--}}
-        {{--<input type="text" name="houseNumber" placeholder="enter number">--}}
+        {{--<input type="text" name="houseNumber" placeholder="enter number">--}}e
 
         {{--<label for="postCode">House Number</label>--}}
         {{--<input type="text" name="postCode" placeholder="enter postCode">--}}
@@ -94,12 +94,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="price">Price</label>
-            <input type="number" name="price" placeholder="£100000">
+            <label for="price">Price  £</label>
+            <input type="number" name="price" placeholder="100000">
         </div>
         <div class="form-group">
-            <label for="commission">Sourcer commission</label>
-            <input type="number" name="commission" placeholder="£5000">
+            <label for="commission">Sourcer commission  £</label>
+            <input type="number" name="commission" placeholder="5000">
         </div>
         <div>
         <label for="description">Description</label>

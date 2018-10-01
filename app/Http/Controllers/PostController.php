@@ -129,7 +129,7 @@ class PostController extends Controller
         $post->update($request->all());
 
         //return redirect to the page
-        return redirect('posts');
+        return redirect('/usersposts');
     }
 
     /**

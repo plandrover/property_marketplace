@@ -69,7 +69,11 @@
                                     @if(Auth::user()->role ==='sourcer')
                                     <li>
                                         <a href="{{route('posts.create')}}">
-                                            Upload New Deal
+                                            @if(Auth::user()->posts()->count()>0)
+                                            List New Deal
+                                                @else
+                                            List first Deal
+                                                @endif
                                         </a>
 
                                     </li>

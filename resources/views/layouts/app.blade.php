@@ -34,9 +34,11 @@
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{--{{ config('app.name', 'home') }}--}}
+                        @if(Auth::guest())
                         DealCombinator
+                            @else DealCombinator / {{Auth::user()->role}}
+                            @endif
                     </a>
-
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -64,6 +66,7 @@
                                         </a>
 
                                     </li>
+                                    @if(Auth::user()->role ==='sourcer')
                                     <li>
                                         <a href="{{route('posts.create')}}">
                                             Upload New Deal
@@ -71,11 +74,12 @@
 
                                     </li>
                                     <li>
-                                        <a href="{{url("/usersposts/$post->user_id")}}">
+                                        <a href="{{url("/usersposts")}}">
                                             My deals
                                         </a>
 
                                     </li>
+                                    @endif
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

@@ -17,7 +17,6 @@
                     <li>Baths: {{$post->bathrooms_no}}</li>
                     <li>Beds: {{$post->beds_no}}</li>
 
-
                 </ul>
 
 

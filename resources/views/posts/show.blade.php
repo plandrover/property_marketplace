@@ -21,17 +21,18 @@
                 <p>Description: {{$post->description}}</p>
             </div>
         </div>
+        @if(Auth::user()->can('update', $post))
         <div class="row">
             <div class="col-lg-12">
                 <p><a href="{{route('posts.edit',$post->id)}}">edit this listing</a></p>
             </div>
         </div>
+        @endif
         <div class="row">
             <a href="{{url("/usersposts/$post->user_id")}}">See all posts by this user </a>
         </div>
 
     </div>
-
 
 
 

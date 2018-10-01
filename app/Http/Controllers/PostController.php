@@ -31,7 +31,12 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('posts/create');
+        if(Auth::user()->role === 'sourcer'){
+            return view('posts/create');
+        }
+        else{
+          return redirect('/posts');
+        }
     }
 
     /**
@@ -60,7 +65,7 @@ class PostController extends Controller
             'beds_no' => $request->beds_no,
             'bathrooms_no' => $request->bathrooms_no,
             'price' => $request->price,
-            'commission' => $request->commision,
+            'commission' => $request->commission,
             'description' =>$request->description
     ]);
 
@@ -97,9 +102,15 @@ class PostController extends Controller
     {
         //
 
-        $post = Post::findOrFail($id);
+        if(Auth::user()->role === 'sourcer'){
+            $post = Post::findOrFail($id);
 
-        return view('posts.edit', compact('post'));
+            return view('posts.edit', compact('post'));
+        }
+        else{
+            return redirect('/posts');
+        }
+
     }
 
     /**

@@ -200,10 +200,12 @@ Route::get('/user/{id}/post', function ($user_id){
 
 
 
-Route::get('/usersposts/{user_id}', function ($user_id){
+Route::get('/usersposts', function ()
+{
 
-    $posts = Post::where('user_id','=',$user_id)->get();
+    $posts = Post::where('user_id','=',Auth::user()->id)->get();
 
 
     return view('posts/index', ['posts' => $posts]);
+
 })->name('usersPosts');

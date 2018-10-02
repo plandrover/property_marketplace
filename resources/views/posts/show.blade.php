@@ -29,8 +29,9 @@
         </div>
         @endif
         <div class="row">
-            <a href="{{url("/usersPosts/$post->user_id")}}">See all posts by this user </a>
+            <a href="{{url("/usersPosts/$post->user_id")}}">See all posts by this {{ $post->user->name }} </a>
         </div>
+
 
 
     </div>

@@ -20,3 +20,4 @@ Vue.component('favourite', require('./components/Favourite.vue'));
 const app = new Vue({
     el: '#app'
 });
+

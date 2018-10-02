@@ -16,8 +16,15 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     {{--<link rel="stylesheet" type="text/css" href="/css/style.css">--}}
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
 </head>
 <body>
     <div id="app">
@@ -38,7 +45,7 @@
                         {{--{{ config('app.name', 'home') }}--}}
                         @if(Auth::guest())
                         DealCombinator
-                            @else DealCombinator / {{Auth::user()->role}}
+                            @else DealCombinator / <span class="nav-role">{{Auth::user()->role}}</span>
                             @endif
                     </a>
                 </div>
@@ -81,13 +88,13 @@
                                     </li>
                                     <li>
                                         <a href="{{url("/usersposts")}}">
-                                            My deals
+                                            My Deals
                                         </a>
 
                                     </li>
                                     @endif
                                     <li>
-                                        <a href="{{ url('my_favourites') }}">My Favorites</a>
+                                        <a href="{{ url('my_favourites') }}">Favorites</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('logout') }}"

@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="page-header">
-                    <h2>Listings currently available</h2>
+                    <h2>Listings currently available </h2>
                 </div>
                 @forelse ($posts as $post)
                     <div class="panel panel-default">
@@ -84,7 +84,8 @@
 
                             </ul>
                         </div>
-                        <a href="{{route('posts.show', $post->id)}}">read more</a>
+                        <p> {{$post->description}} <a href="{{route('posts.show', $post->id)}}">  ...read more</a></p>
+
                         <p>Listed by: <a href="{{url("/usersposts/$post->user_id")}}">{{ $post->user->name }}</a></p>
 
                         @if (Auth::check())
@@ -121,8 +122,13 @@
 
                     @endif
                 </div>
+                <button class ="btn" onclick="goBack()">Go Back</button>
 
-                {{ $posts->links() }}
+                <div class="pagination-bar">
+                    {{ $posts->links() }}
+
+                </div>
+
             </div>
         </div>
     </div>

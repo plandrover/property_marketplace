@@ -8,9 +8,15 @@
             <div class="col-lg-12">
                 <div class="content">
                     <h1>Deal combinator</h1>
-                    <h3>Where deals are made</h3>
-                    <hr>
-                    <button type="button" class="btn btn-secondary btn-lg">Get started</button>
+                    <h3 class="css-typing">Where deals <span data-typer-targets="a developer,a hero,the boss">are</span> made</h3>
+
+                    {{--<h1>Typer.js is--}}
+                        {{--<span class="typer" id="main" data-words="great,fun,lightweight,easy" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>--}}
+                        {{--<span class="cursor" data-owner="main"></span>--}}
+                    {{--</h1>--}}
+                    {{--<h3>Where deals are made</h3>--}}
+
+                    <button type="button" class="btn btn-secondary btn-lg" id="get-started-btn">Get started</button>
                 </div>
             </div>
         </div>
@@ -56,46 +62,15 @@
                 <h1>How it works</h1>
                 <h6>for investors...</h6>
             </div>
-        </div>
-        <div class="row how_it_works">
+        <div class="row how_it_works how_content">
             <div class="col-lg-6 ">
-                <h3 style="color: black">Upload a screenshot of investor side here here</h3>
+                <img src="/images/app_screenshot.png" class="app_screenshot">
             </div>
             <div class="col-lg-6 steps">
                 <div>1</div>
                 <p>Sign up</p>
                 <div>2</div>
-                <p>Upload deals online</p>
-                <div>3</div>
-                <p>Reply to investors and message investors to build custom deals</p>
-                <a href="#" class="btn_app">
-                    <img src="/images/logo-app_store.png" class="btn-app">
-                </a>
-                <a href="#" class="btn_app">
-                    <img src="/images/googleplay.png" class="btn-app">
-                </a>
-
-            </div>
-        </div>
-
-
-    </div>
-    <div class="container-fluid how_works sourcers">
-        <div class="row how_it_works sourcers">
-            <div class="col-lg-12">
-                <h1>How it works</h1>
-                <h6>for sourcers...</h6>
-            </div>
-        </div>
-        <div class="row how_it_works sourcers">
-            <div class="col-lg-6 ">
-                <h3 style="color: black">Upload a screenshot of deal source here</h3>
-            </div>
-            <div class="col-lg-6 steps">
-                <div>1</div>
-                <p>Sign up</p>
-                <div>2</div>
-                <p>Browse the deals in your area</p>
+                <p>Browse trusted deals</p>
                 <div>3</div>
                 <p>Become a member to message the sourcer and get full information</p>
                 <a href="#" class="btn_app">
@@ -104,14 +79,73 @@
                 <a href="#" class="btn_app">
                     <img src="/images/googleplay.png" class="btn-app">
                 </a>
-
             </div>
-
-
+            </div>
         </div>
 
 
     </div>
+    <div class="container-fluid how_it_works sourcers">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>How it works</h1>
+                <h6>for sourcers...</h6>
+            </div>
+        <div class="row how_it_works sourcers how_content">
+            <div class="col-lg-6 ">
+                <img src="/images/app_screenshot.png" class="app_screenshot">
+w            </div>
+            <div class="col-lg-6 steps">
+                <div>1</div>
+                <p>Sign up</p>
+                <div>2</div>
+                <p>Upload deals to Deal Combinator</p>
+                <div>3</div>
+                <p>Connect to investors and  build custom deals</p>
+                <a href="#" class="btn_app">
+                    <img src="/images/logo-app_store.png" class="btn-app">
+                </a>
+                <a href="#" class="btn_app">
+                    <img src="/images/googleplay.png" class="btn-app">
+                </a>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+    {{--<div class="container-fluid how_works sourcers">--}}
+        {{--<div class="row how_it_works sourcers">--}}
+            {{--<div class="col-lg-12">--}}
+                {{--<h1>How it works</h1>--}}
+                {{--<h6>for sourcers...</h6>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="row how_it_works sourcers">--}}
+            {{--<div class="col-lg-6 ">--}}
+                {{--<h3 style="color: black">Upload a screenshot of deal source here</h3>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-6 steps">--}}
+                {{--<div>1</div>--}}
+                {{--<p>Sign up</p>--}}
+                {{--<div>2</div>--}}
+                {{--<p>Browse the deals in your area</p>--}}
+                {{--<div>3</div>--}}
+                {{--<p>Become a member to message the sourcer and get full information</p>--}}
+                {{--<a href="#" class="btn_app">--}}
+                    {{--<img src="/images/logo-app_store.png" class="btn-app">--}}
+                {{--</a>--}}
+                {{--<a href="#" class="btn_app">--}}
+                    {{--<img src="/images/googleplay.png" class="btn-app">--}}
+                {{--</a>--}}
+
+            {{--</div>--}}
+
+
+        {{--</div>--}}
+
+
+    {{--</div>--}}
     <div class="container-fluid testimonials">
         <div class="row">
             <div class="col-lg-12">
@@ -123,22 +157,21 @@
             <div class="col-lg-4">
                 <blockquote>
                     Since joining DealCombinator I have been avle to grwo my networking and make more deals than ever before. It is now an essential tool in my business.
-                    <cite><img src="/images/person_1.jpg" alt="Customer 3 Photo">Harrison Stevens</cite>
+                    <cite><br></b><img src="/images/person_1.jpg" alt="Customer 3 Photo"><br>Harrison Stevens</cite>
                 </blockquote>
 
             </div>
             <div class="col-lg-4">
                 <blockquote>
                     As a new investor I did not have any network, but Deal Combinator gave me the confidence and the resources to meet many like minded people and make my first deal.
-                    <cite><img src="/images/person_2.jpeg" alt="Customer 3 Photo">Sarah Milton</cite>
+                    <cite><br></b><img src="/images/person_2.jpeg" alt="Customer 3 Photo"><br>Harrison Stevens</cite>
                 </blockquote>
 
             </div>
             <div class="col-lg-4">
                 <blockquote>
-                    I couldn't imagine life without it!
-                    <cite><img src="/images/person_3.jpg" alt="Customer 3 Photo">Josh Ryan</cite>
-                </blockquote>
+                    I couldn't imagine life without it! Before Deal Combinator i was never sure which investors to trust, thats all changed now! I couldn't recommend more!
+                    <cite><br></b><img src="/images/person_3.jpg" alt="Customer 3 Photo"><br>Harrison Stevens</cite>                </blockquote>
 
             </div>
         </div>
@@ -154,7 +187,7 @@
             <div class="col-lg-4 section_plans">
                 <div class="plan-box">
                     <div>
-                        <h3>Master</h3>
+                        <h3>Starter</h3>
                         <p class="plan-price">£399 <span>/ month</span></p>
                     </div>
                     <div>
@@ -166,14 +199,14 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="#" btn>Sign up now</a>
+                        <a href="#" class ="btn">Sign up now</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 section_plans">
                 <div class="plan-box">
                     <div>
-                        <h3>Pro</h3>
+                        <h3>Professional</h3>
                         <p class="plan-price">£399 <span>/ month</span></p>
                     </div>
                     <div>
@@ -192,7 +225,7 @@
             <div class="col-lg-4 section_plans">
                 <div class="plan-box">
                     <div>
-                        <h3>Starter</h3>
+                        <h3>Enterprise</h3>
                         <p class="plan-price">£399 <span>/ month</span></p>
                     </div>
                     <div>
@@ -204,58 +237,62 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="#" class="plan_btn">Sign up now</a>
+                        <a href="#" class="btn">Sign up now</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="page-footer">
-
-            <!-- Footer Elements -->
-            <div class="container">
-
-                <!-- Grid row-->
-                <div class="row">
-
-                    <!-- Grid column -->
-                    <div class="col-md-12 py-5">
-                        <div class="foot-icons">
-
-                            <!-- Facebook -->
-                            <i class="fab fa-facebook-f fa-2x"></i>
-                            <!-- Twitter -->
-                                <i class="fab fa-twitter fa-2x foot-icon"></i>                            <!-- Google +-->
-                                <i class="fab fa-google-plus-g fa-2x foot-icon"></i>
-                            <!--Linkedin -->
-                                <i class="fab fa-linkedin-in fa-2x foot-icon"></i>                            </a>
-                            <!--Instagram-->
-                                <i class="fab fa-instagram fa-2x foot-icon"></i>                            </a>
-                            <!--Pinterest-->
-                            <i class="fab fa-pinterest-p fa-2x foot-icon"></i>                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-
-            </div>
-            <!-- Footer Elements -->
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                 DealCombinator Ltd.
-            </div>
-            <!-- Copyright -->
-
-        </footer>
-        <!-- Footer -->
     </div>
+    <!-- Footer -->
+    <footer class="page-footer">
 
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="foot-icons">
+
+                        <!-- Facebook -->
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                        <!-- Twitter -->
+                        <i class="fab fa-twitter fa-2x foot-icon"></i>                            <!-- Google +-->
+                        <i class="fab fa-google-plus-g fa-2x foot-icon"></i>
+                        <!--Linkedin -->
+                        <i class="fab fa-linkedin-in fa-2x foot-icon"></i>                            </a>
+                        <!--Instagram-->
+                        <i class="fab fa-instagram fa-2x foot-icon"></i>                            </a>
+                        <!--Pinterest-->
+                        <i class="fab fa-pinterest-p fa-2x foot-icon"></i>                            </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            DealCombinator Ltd.
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstra2p JS -->
+    <script src="/resources/assets/js/script.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="/resources/assets/js/typer.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>

@@ -3,6 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Auth;
+
+
+
 
 class Post extends Model
 {
@@ -34,5 +38,12 @@ class Post extends Model
     public function userCanEdit(User $user)
     {
         return $user->isAdmin() || $this->user_id == $user->id;
+    }
+
+    public function favourited()
+    {
+        return (int) Favourite::where('user_id', Auth::id())
+            ->where('post_id', $this->id)
+            ->count();
     }
 }

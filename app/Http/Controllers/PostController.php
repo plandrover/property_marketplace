@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
 
+
 class PostController extends Controller
 {
     /**
@@ -17,7 +18,11 @@ class PostController extends Controller
     {
         //
 
-        $posts = Post::all();
+//        $posts = Post::all();
+        $posts = Post::paginate(5);
+
+//        $user = Auth::user();
+//        $user->load('favourited');
 
 
         return view('posts.index', compact('posts'));
@@ -149,9 +154,24 @@ class PostController extends Controller
 
 
     }
-//    public function allPostsByAUser($user_id){
-//
-//        retutn
-//        $posts = Post::
-//    }
+    public function favouritePost(Post $post)
+    {
+        Auth::user()->favourites()->attach($post->id);
+
+        return back();
+    }
+
+    public function unFavouritePost(Post $post)
+    {
+        Auth::user()->favourites()->detach($post->id);
+
+        return back();
+    }
+    public function  authPosts()
+    {
+        $posts = Post::where('user_id','=',Auth::user()->id)->paginate(5);
+
+        return view('posts/index', ['posts' => $posts]);
+    }
+
 }

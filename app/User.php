@@ -23,14 +23,21 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function post(){
-
-        return $this->hasOne('App\Post');
-    }
-
-    public function posts(){
+    public function posts()
+    {
 
         return $this->hasMany('App\Post');
     }
+    public function favourites()
+    {
+        return $this->belongsToMany(Post::class, 'favourites', 'user_id', 'post_id')->withTimeStamps();
+    }
+
+//    public function hasFavourited($post)
+//    {
+//        return $this->favourites->filter(function ($favourite) use ($post) {
+//            return $favourite->post_id == $post->id;
+//        })->count() != 0;
+//    }
 
 }

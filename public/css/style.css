@@ -318,12 +318,19 @@ blockquote:before {
     margin-bottom: 20px;
 }
 
-/*Contact form*/
-.contactForm{
-    background-color: #DC143C;
-    border-radius: 50px;
-    /*border: 1px solid #DC143C;*/
+/*FOOTER*/
+
+.foot-icons{
+
+    text-align: center;
+    margin-bottom: 10px;
 }
+.foot-icon{
+
+   margin: 10px;
+}
+
+
 /*Loginpage*/
 
 .login  {

@@ -59,7 +59,7 @@
         </div>
         <div class="row how_it_works">
             <div class="col-lg-6 ">
-                <h3>hello world</h3>
+                <h3 style="color: black">Upload a screenshot of investor side here here</h3>
             </div>
             <div class="col-lg-6 steps">
                 <div>1</div>
@@ -89,7 +89,7 @@
         </div>
         <div class="row how_it_works sourcers">
             <div class="col-lg-6 ">
-                <h3>hello world</h3>
+                <h3 style="color: black">Upload a screenshot of deal source here</h3>
             </div>
             <div class="col-lg-6 steps">
                 <div>1</div>
@@ -200,8 +200,7 @@
                             <li><i class="fas fa-check"></i>nwwnnneiw</li>
                             <li><i class="fas fa-check"></i>nwwnnneiw</li>
                             <li><i class="fas fa-times"></i></li>
-                            <li
-                            <i class="fas fa-times"></i></li>
+                            <li><i class="fas fa-times"></i></li>
                         </ul>
                     </div>
                     <div>
@@ -210,45 +209,48 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="container-fluid">
-        <div class="container contactForm">
-            <form>
+        <!-- Footer -->
+        <footer class="page-footer">
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!-- Grid row-->
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="col">
-                            <label>First name</label>
-                            <input type="text" class="form-control" placeholder="First name">
+
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-5">
+                        <div class="foot-icons">
+
+                            <!-- Facebook -->
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                            <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x foot-icon"></i>                            <!-- Google +-->
+                                <i class="fab fa-google-plus-g fa-2x foot-icon"></i>
+                            <!--Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x foot-icon"></i>                            </a>
+                            <!--Instagram-->
+                                <i class="fab fa-instagram fa-2x foot-icon"></i>                            </a>
+                            <!--Pinterest-->
+                            <i class="fab fa-pinterest-p fa-2x foot-icon"></i>                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="col">
-                            <label>Last name</label>
-                            <input type="text" class="form-control" placeholder="Last name">
-                        </div>
-                    </div>
+                    <!-- Grid column -->
+
                 </div>
-                <div class="form-group">
-                    <label>Email address</label>
-                    <input type="email" class="form-control" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label>Example multiple select</label>
-                    <select multiple class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </form>
-        </div>
+                <!-- Grid row-->
+
+            </div>
+            <!-- Footer Elements -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                 DealCombinator Ltd.
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
     </div>
 
 

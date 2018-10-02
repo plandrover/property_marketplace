@@ -199,15 +199,19 @@ Route::get('/user/{id}/post', function ($user_id){
 Route::get('/usersposts', function ()
 {
 
-    $posts = Post::where('user_id','=',Auth::user()->id)->get();
+    $posts = Post::where('user_id','=',Auth::user()->id)->paginate(5);
 
     return view('posts/index', ['posts' => $posts]);
 
 })->name('usersPosts');
+
+//Route::get('/userposts', 'PostController@authPosts')->name('userPosts');
+
+
 Route::get('/usersposts/{user_id}', function ($user_id)
 {
 
-    $posts = Post::where('user_id','=',$user_id)->get();
+    $posts = Post::where('user_id','=',$user_id)->paginate(5);
 
     return view('posts/index', ['posts' => $posts]);
 
@@ -215,14 +219,9 @@ Route::get('/usersposts/{user_id}', function ($user_id)
 
 
 
-//Route::get('/seeusersposts', function ()
-//{
-//
-//    $posts = User::find(user_id)->posts;
-//
-//    return view('posts/index', ['posts' => $posts]);
-//
-//})->name('usersPosts');
+Route::post('favourite/{post}', 'PostController@favouritePost');
+Route::post('unfavourite/{post}', 'PostController@unFavouritePost');
 
+Route::get('my_favourites', 'UsersController@myFavourites')->middleware('auth');
 
 

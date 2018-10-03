@@ -28,10 +28,15 @@
             </div>
         </div>
         @endif
+        @if(Auth::user()->can('update', $post))
+            <div class="row">
+                <a class="user-sellers" href="{{url("/usersposts")}}">See all of your posts</a>
+            </div>
+            @else
         <div class="row">
-            <a href="{{url("/usersPosts/$post->user_id")}}">See all posts by this {{ $post->user->name }} </a>
+            <a class="user-sellers" href="{{url("/usersPosts/$post->user_id")}}">See all posts by <span class="user">{{ $post->user->name }} </span></a>
         </div>
-
+        @endif
 
 
     </div>

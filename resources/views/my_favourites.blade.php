@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="page-header">
-                    <h3>My Favourites</h3>
+                    <h2>My Favourites</h2>
                 </div>
                 @forelse ($myFavourites as $myFavourite)
                     <div class="panel panel-default">
@@ -22,8 +22,12 @@
 
                             </ul>
                         </div>
-                        <a href="{{route('posts.show', $myFavourite->id)}}">read more</a>
-                        <p>Listed by: <a href="{{url("/usersposts/$myFavourite->user_id")}}">{{ $myFavourite->user->name }}</a></p>
+                            <div class="panel-links">
+                                <p><a href="{{route('posts.show', $myFavourite->id)}}">View deal</a></p>
+                                <p>Listed by: <a href="{{url("/usersposts/$myFavourite->user_id")}}">{{ $myFavourite->user->name }}</a></p>
+                            </div>
+
+
                         @if (Auth::check())
                             <div class="panel-footer">
                                 <favourite
@@ -37,7 +41,19 @@
                 @empty
                     <p>You have no favourite posts.</p>
                 @endforelse
+                <div class="row listing-links">
+                    <button class ="btn" onclick="goBack()">Go Back</button>
+
+                    @if(Auth::user()->role === 'sourcer')
+                        @if($myFavourite->count() < 1)
+
+                            <a class="btn new-listings" href="{{url('/posts')}}">Favourite a listing</a>
+                        @else
+                            <a class="btn new-listings" href="{{url('/posts')}}">See more listings</a>
+                        @endif
+
+                    @endif
+                </div>
             </div>
-        </div>
     </div>
 @endsection

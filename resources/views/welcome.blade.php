@@ -8,7 +8,9 @@
             <div class="col-lg-12">
                 <div class="content">
                     <h1>Deal combinator</h1>
-                    <h3 class="css-typing">Where deals <span data-typer-targets="a developer,a hero,the boss">are</span> made</h3>
+                    <div>
+                        <h3 class="css-typing">Where deals are made</h3>
+                    </div>
 
                     {{--<h1>Typer.js is--}}
                         {{--<span class="typer" id="main" data-words="great,fun,lightweight,easy" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>--}}
@@ -16,13 +18,14 @@
                     {{--</h1>--}}
                     {{--<h3>Where deals are made</h3>--}}
 
-                    <button type="button" class="btn btn-secondary btn-lg" id="get-started-btn">Get started</button>
+                    <button type="button" class="btn btn-secondary btn-lg js--scroll-to-plan" id="get-started-btn">Get started</button>
+                    <button type="button" class="btn btn-secondary btn-lg js--scroll-to-start" id="learn-more-btn">Learn more</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid js--section-features">
         <div class="row what_we_do" id="about">
             <div class="col-lg-12">
                 <h1>Why deal combinator?</h1>
@@ -94,7 +97,7 @@
         <div class="row how_it_works sourcers how_content">
             <div class="col-lg-6 ">
                 <img src="/images/app_screenshot.png" class="app_screenshot">
-w            </div>
+            </div>
             <div class="col-lg-6 steps">
                 <div>1</div>
                 <p>Sign up</p>
@@ -177,7 +180,7 @@ w            </div>
         </div>
 
     </div>
-    <div class="container-fluid" id="plans">
+    <div class="container-fluid js--section-plans" id="plans">
         <div class="row">
             <div class="col-lg-12 section_plans">
                 <h4>Improve your deals today</h4>
@@ -199,7 +202,7 @@ w            </div>
                         </ul>
                     </div>
                     <div>
-                        <a href="#" class ="btn">Sign up now</a>
+                        <a href="{{ route('register') }}" class ="btn">Sign up now</a>
                     </div>
                 </div>
             </div>
@@ -218,7 +221,7 @@ w            </div>
                         </ul>
                     </div>
                     <div>
-                        <a href="#" class="btn">Sign up now</a>
+                        <a href="{{ route('register') }}" class="btn">Sign up now</a>
                     </div>
                 </div>
             </div>
@@ -237,7 +240,7 @@ w            </div>
                         </ul>
                     </div>
                     <div>
-                        <a href="#" class="btn">Sign up now</a>
+                        <a href="{{ route('register') }}" class="btn">Sign up now</a>
                     </div>
                 </div>
             </div>
@@ -288,11 +291,10 @@ w            </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstra2p JS -->
-    <script src="/resources/assets/js/script.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="/resources/assets/js/typer.js"></script>
+    {{--<script src="/resources/assets/js/typer.js"></script>--}}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -302,4 +304,6 @@ w            </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
+    <script src="/js/jquery.waypoints.min.js">  </script>
+    <script src="/js/script.js"></script>
 @endsection

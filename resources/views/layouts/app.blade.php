@@ -28,7 +28,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar-default navbar-static-top" id="laravel-nav">
+        <nav class="navbar-default navbar-static-top sticky" id="laravel-nav">
             <div class="container">
                 <div class="navbar-header">
 
@@ -41,13 +41,16 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+
                         {{--{{ config('app.name', 'home') }}--}}
                         @if(Auth::guest())
-                        DealCombinator
-                            @else DealCombinator / <span class="nav-role">{{Auth::user()->role}}</span>
+                        <a class="navbar-brand" href="{{ url('/') }}">DealCombinator </a>
+                            @else
+                        <a class="navbar-brand" href="{{ url('/posts') }}">DealCombinator / <span class="nav-role">{{Auth::user()->role}}</span>
+                        </a>
+
+
                             @endif
-                    </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

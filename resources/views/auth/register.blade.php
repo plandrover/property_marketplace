@@ -62,21 +62,33 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="title">Date of birth</label>
-                            <input type="date" name="dob">
+                            <label for="title" class="col-md-4 control-label">Date of birth</label>
+                            <div class="col-md-6">
+                                <input type="date" name="dob" class="form-control">
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="role" id="investorTypeRadio1" value="sourcer">
-                            <label class="form-check-label" for="investorTypeRadio1">
-                                Deal Sourcer
+                        {{--<div class="form-group form-check radio-inline">--}}
+                            {{--<input class="form-check-input" type="radio" name="role" id="investorTypeRadio1" value="sourcer">--}}
+                            {{--<label class="form-check-label col-md-4 control-label" for="investorTypeRadio1">--}}
+                                {{--Deal Sourcer--}}
+                            {{--</label>--}}
+                        {{--</div>--}}
+                        {{--<div class=" form-group form-check radio-inline">--}}
+                            {{--<label class="form-check-label col-md-4 control-label" for="investorTypeRadio2">--}}
+
+                            {{--<input class="form-check-input " type="radio" name="role" id="investorTypeRadio2" value="investor" checked>--}}
+                                {{--Investor--}}
+                            {{--</label>--}}
+                        {{--</div>--}}
+                        <div class="radio-groups">
+                            <label class="radio-inline">
+                                <input type="radio" name="role" value="investor" checked >Investor
+                            </label>
+                            <label class="radio-inline ">
+                                <input type="radio" name="role" value="sourcer">Deal Sourcer
                             </label>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="role" id="investorTypeRadio2" value="investor" checked>
-                            <label class="form-check-label" for="investorTypeRadio2">
-                                Investor
-                            </label>
-                        </div>
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

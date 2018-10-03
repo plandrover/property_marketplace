@@ -12,12 +12,6 @@
                         <h3 class="css-typing">Where deals are made</h3>
                     </div>
 
-                    {{--<h1>Typer.js is--}}
-                        {{--<span class="typer" id="main" data-words="great,fun,lightweight,easy" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>--}}
-                        {{--<span class="cursor" data-owner="main"></span>--}}
-                    {{--</h1>--}}
-                    {{--<h3>Where deals are made</h3>--}}
-
                     <button type="button" class="btn btn-secondary btn-lg js--scroll-to-plan" id="get-started-btn">Get started</button>
                     <button type="button" class="btn btn-secondary btn-lg js--scroll-to-start" id="learn-more-btn">Learn more</button>
                 </div>
@@ -35,7 +29,7 @@
             <div class="col-lg-3">
                 <i class="fas fa-lock icons"></i>
                 <h2>Safe and secure</h2>
-                <p>Securely uplpoad your deals onto the website and add as little or as much information as you choose. Also, check the track record of whoever you do business with.</p>
+                <p>Securely upload your deals onto the website and add as little or as much information as you choose. Also, check the track record of whoever you do business with.</p>
             </div>
             <div class="col-lg-3">
                 <i class="fas fa-search icons"></i>
@@ -117,38 +111,7 @@
 
 
     </div>
-    {{--<div class="container-fluid how_works sourcers">--}}
-        {{--<div class="row how_it_works sourcers">--}}
-            {{--<div class="col-lg-12">--}}
-                {{--<h1>How it works</h1>--}}
-                {{--<h6>for sourcers...</h6>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="row how_it_works sourcers">--}}
-            {{--<div class="col-lg-6 ">--}}
-                {{--<h3 style="color: black">Upload a screenshot of deal source here</h3>--}}
-            {{--</div>--}}
-            {{--<div class="col-lg-6 steps">--}}
-                {{--<div>1</div>--}}
-                {{--<p>Sign up</p>--}}
-                {{--<div>2</div>--}}
-                {{--<p>Browse the deals in your area</p>--}}
-                {{--<div>3</div>--}}
-                {{--<p>Become a member to message the sourcer and get full information</p>--}}
-                {{--<a href="#" class="btn_app">--}}
-                    {{--<img src="/images/logo-app_store.png" class="btn-app">--}}
-                {{--</a>--}}
-                {{--<a href="#" class="btn_app">--}}
-                    {{--<img src="/images/googleplay.png" class="btn-app">--}}
-                {{--</a>--}}
 
-            {{--</div>--}}
-
-
-        {{--</div>--}}
-
-
-    {{--</div>--}}
     <div class="container-fluid testimonials">
         <div class="row">
             <div class="col-lg-12">

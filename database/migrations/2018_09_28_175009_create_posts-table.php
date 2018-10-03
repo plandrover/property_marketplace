@@ -27,6 +27,7 @@ class CreatePostsTable extends Migration
             $table->decimal('price');
             $table->integer('commission')->nullable();
             $table->text('description');
+            $table->string('image_pathway')->nullable();
             $table->timestamps();
 
 

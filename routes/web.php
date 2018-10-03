@@ -186,7 +186,7 @@ Route::get('/post/{id}/user', function ($id){
 |--------------------------------------------------------------------------
 */
 
-Route::resource('/posts', 'PostController');
+Route::resource('posts', 'PostController');
 
 Route::get('/user/{id}/post', function ($user_id){
 

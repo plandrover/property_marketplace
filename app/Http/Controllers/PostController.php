@@ -40,7 +40,7 @@ class PostController extends Controller
             return view('posts/create');
         }
         else{
-          return redirect('/posts');
+          return redirect()->route('posts.index');
         }
     }
 
@@ -71,8 +71,9 @@ class PostController extends Controller
             'bathrooms_no' => $request->bathrooms_no,
             'price' => $request->price,
             'commission' => $request->commission,
-            'description' =>$request->description
-    ]);
+            'description' =>$request->description,
+            'image_path'=>$request->image_path,c
+        ]);
 
 //    $post = new Post;
 //    $post-> title = $request->title;
@@ -172,6 +173,13 @@ class PostController extends Controller
         $posts = Post::where('user_id','=',Auth::user()->id)->paginate(5);
 
         return view('posts/index', ['posts' => $posts]);
+    }
+    public function upload(Request $request)
+    {
+//        Read image
+        $img = Post::make($request->file('image')->getPathName());
+        $extension = $request->file('image')->getClientOriginalExtension();
+
     }
 
 }

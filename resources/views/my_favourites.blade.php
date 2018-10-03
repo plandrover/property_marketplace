@@ -14,13 +14,30 @@
                         </div>
 
                         <div class="panel-body">
-                            <ul>
-                                <li>Price: £{{$myFavourite->price}}</li>
-                                <li>Commision: £{{$myFavourite->commission}}</li>
-                                <li>Baths: {{$myFavourite->bathrooms_no}}</li>
-                                <li>Beds: {{$myFavourite->beds_no}}</li>
 
-                            </ul>
+                            <li><i class="fas fa-bath listing-icon"></i>
+                                <p>{{$myFavourite->bathrooms_no}}</p></li>
+                            <li><i class="fas fa-bed listing-icon"></i>
+                                <p>{{$myFavourite->beds_no}}</p></li>
+                            <div class="price-p row">
+                                <div class="col-lg-4">
+                                    <span class="red">Price:</span><p> £{{$myFavourite->price}}</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="red">Commision:</span><p> £{{$myFavourite->commission}}</p>
+                                </div>
+
+
+                            </div>
+
+
+                            {{--<ul>--}}
+                                {{--<li>Price: £{{$myFavourite->price}}</li>--}}
+                                {{--<li>Commision: £{{$myFavourite->commission}}</li>--}}
+                                {{--<li>Baths: {{$myFavourite->bathrooms_no}}</li>--}}
+                                {{--<li>Beds: {{$myFavourite->beds_no}}</li>--}}
+
+                            {{--</ul>--}}
                         </div>
                             <div class="panel-links">
                                 <p><a href="{{route('posts.show', $myFavourite->id)}}">View deal</a></p>
@@ -55,5 +72,6 @@
                     @endif
                 </div>
             </div>
+    </div>
     </div>
 @endsection

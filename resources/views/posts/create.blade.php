@@ -3,54 +3,25 @@
 
 
 @section('content')
-
-
-
-    {{--<form  method="post" action="/posts" style="color: black">--}}
-
-        {{--<label for="title">Title</label>--}}
-        {{--<input type="text" name="title" placeholder="enter title">--}}
-        {{--{{csrf_field()}}--}}
-
-        {{--<label for="houseNumber">House Number</label>--}}
-        {{--<input type="text" name="houseNumber" placeholder="enter number">--}}
-
-        {{--<label for="postCode">House Number</label>--}}
-        {{--<input type="text" name="postCode" placeholder="enter postCode">--}}
-
-        {{--<label for="houseNumber">House Number</label>--}}
-        {{--<input type="text" name="houseNumber" placeholder="enter number">--}}
-        {{--<div class="form-group">--}}
-            {{--<label for="exampleFormControlSelect1">Example select</label>--}}
-            {{--<select class="form-control" id="exampleFormControlSelect1">--}}
-                {{--<option>1</option>--}}
-                {{--<option>2</option>--}}
-                {{--<option>3</option>--}}
-                {{--<option>4</option>--}}
-                {{--<option>5</option>--}}
-            {{--</select>--}}
-        {{--</div>--}}
-
-
-        {{--<input type="submit" name="submit">--}}
-
-    {{--</form>--}}
 <div class="container">
     <h2>Create Post</h2>
-    <form method="post" action="/posts">
+    <form method="post" action="/posts" class="create">
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" name="title" placeholder="enter title">
+            <input type="text" name="title" placeholder="enter title" class="form-control">
             {{csrf_field()}}
         </div>
-        <div class="form-group">
-            <label for="house_number">House Number</label>
-            <input type="number" name="house_number" placeholder="27">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="house_number">House Number</label>
+                <input type="number" name="house_number" placeholder="27" class="form-control inline-form-input">
+            </div>
+            <div class="form-group form-check">
+                <label for="post_code">Post code</label>
+                <input type="text" name="post_code" placeholder="EX1 ABC" class="form-control inline-form-input">
+            </div>
         </div>
-        <div class="form-group form-check">
-            <label for="post_code">Post code</label>
-            <input type="text" name="post_code" placeholder="EX1 ABC">
-        </div>
+
         <div class="form-group">
             <label for="property_type">Property type</label>
             <select class="form-control" name="property_type">
@@ -74,7 +45,7 @@
                 <option>7</option>
                 <option>8</option>
                 <option>9</option>
-                <option>10</option>
+                <option>10+</option>
             </select>
         </div>
         <div class="form-group">
@@ -89,20 +60,25 @@
                 <option>7</option>
                 <option>8</option>
                 <option>9</option>
-                <option>10</option>
+                <option>10+</option>
             </select>
         </div>
         <div class="form-group">
             <label for="price">Price  £</label>
-            <input type="number" name="price" placeholder="100000">
+            <input type="number" name="price" placeholder="100000" class="form-control">
         </div>
         <div class="form-group">
             <label for="commission">Sourcer commission  £</label>
-            <input type="number" name="commission" placeholder="5000">
+            <input type="number" name="commission" placeholder="5000" class="form-control">
         </div>
-        <div>
+        <div class="form-group">
             <label for="description">Description</label>
             <textarea class="form-control" name="description" rows="3" placeholder="extra details..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Upload an image</label>
+
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
         </div>
 
 

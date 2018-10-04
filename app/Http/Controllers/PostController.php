@@ -72,7 +72,7 @@ class PostController extends Controller
             'price' => $request->price,
             'commission' => $request->commission,
             'description' =>$request->description,
-            'image_path'=>$request->image_path,c
+            'image_path'=>$request->image_path,
         ]);
 
 //    $post = new Post;

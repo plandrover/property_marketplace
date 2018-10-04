@@ -82,16 +82,16 @@
 
             <input type="submit" name="submit" value="UPDATE"
                    onclick="return confirm('Please confirm to update your listing')" class="btn">
-            <form method="post" action="/posts/{{$post->id}}">
-                {{csrf_field()}}
-                <input type="hidden" name="_method" value="DELETE">
-                <input type="submit" value="DELETE"
-                       onclick="return confirm('Are you sure you want to delete this listing?')" class="btn">
 
-            </form>
 
         </form>
+        <form method="post" action="/posts/{{$post->id}}">
+            {{csrf_field()}}
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="DELETE"
+                   onclick="return confirm('Are you sure you want to delete this listing?')" class="btn">
 
+        </form>
 
     </div>
 

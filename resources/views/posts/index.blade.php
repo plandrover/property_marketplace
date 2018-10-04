@@ -4,12 +4,12 @@
 
 @section('content')
 
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
 
-
-                <div class="page-header">
+                    <div class="page-header">
                     <h2>Listings currently available </h2>
                 </div>
                 @forelse ($posts as $post)
@@ -20,6 +20,21 @@
                         </div>
 
                         <div class="panel-body">
+
+                            @if($post->property_type ==='House')
+                                <img src="/images/house.jpeg">
+                            @elseif($post->property_type ==='Flat')
+                                <img src="/images/flat.jpg">
+                            @elseif($post->property_type ==='Land')
+                                <img src="/images/land1.jpeg">
+                            @elseif($post->property_type ==='Bungalow')
+                                <img src="/images/bungalow.jpg">
+                            @elseif($post->property_type ==='Commercial')
+                                <img src="/images/commercial.jpeg">
+                            @else
+                                <img src="/images/house.jpeg">
+                            @endif
+
                             <ul>
 
                                 <li><i class="fas fa-bath listing-icon"></i>
@@ -28,10 +43,12 @@
                                     <p>{{$post->beds_no}}</p></li>
                                 <div class="price-p row">
                                     <div class="col-lg-4">
-                                        <span class="red">Price:</span><p> £{{$post->price}}</p>
+                                        <span class="red">Price:</span>
+                                        <p> £{{$post->price}}</p>
                                     </div>
                                     <div class="col-lg-4">
-                                        <span class="red">Commision:</span><p> £{{$post->commission}}</p>
+                                        <span class="red">Commision:</span>
+                                        <p> £{{$post->commission}}</p>
                                     </div>
 
 
@@ -70,7 +87,7 @@
 
                             <a class="btn new-listings" href="{{route('posts.create')}}">Create another new listing</a>
                         @else
-                            <p>You haven't listed a poperty yet!</p>
+                            <p>You haven't listed a property yet!</p>
                             <a href="{{route('posts.create')}}">Create your first listing here</a>
                         @endif
 

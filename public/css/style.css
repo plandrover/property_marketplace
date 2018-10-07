@@ -703,3 +703,10 @@ p a{
 .carousel-item{
     height: 100px;
 }
+
+/*Fav icon on individual listing*/
+#favs-link-dissapear{
+    color: transparent;
+    font-size: 1px;
+    text-decoration: none;
+}

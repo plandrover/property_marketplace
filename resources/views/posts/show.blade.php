@@ -43,6 +43,10 @@
             </div>
         @else
             <div class="row deal-sourcer">
+                <favourite id="favs-link-dissapear"
+                        post="{{ $post->id }}"
+                        favourited="{{ $post->favourited() ? 'true' : '' }}"
+                ></favourite>
                 <a class="user-sellers" href="{{url("/usersPosts/$post->user_id")}}">See all posts by <span
                             class="user">{{ $post->user->name }} </span></a>
                 <a href="#"><i class="far fa-envelope"></i></a>

@@ -86,7 +86,7 @@ h1{
 .navbar-default .navbar-nav > li > a {
     color: white;
     margin-top: 4px;
-    font-size: 15pxs;
+    font-size: 15px;
 }
 .navbar-default .navbar-nav > li > a:hover {
     color: white;
@@ -281,7 +281,7 @@ h1{
 blockquote {
     padding: 2%;
     font-style: italic;
-    line-height: 145%;w
+    line-height: 145%;
     position: relative;
     display: block;
     margin-block-start: 1em;
@@ -658,6 +658,8 @@ p a{
     height: 6vw;
     border-top: 1px solid #e8e8e8;
     text-align: center;
+    padding-top: 3%;
+    padding-bottom: 6%;
 }
 .deal-details p{
     margin-left: 3%;
@@ -666,8 +668,17 @@ p a{
     color: #C40505;
     font-size: 25px;
     margin-left: 20px;
+        /*margin-bottom: 50px;*/
     padding: 2%;
+    padding-top: 0%;
 }
+.deal-sourcer i:hover{
+    font-size: 35px;
+}
+
+
+
+
 .deal-sourcer .btn{
     color: white;
 }
@@ -700,6 +711,60 @@ p a{
 
 }
 
-.carousel-item{
-    height: 100px;
+
+
+/*Fav icon on individual listing*/
+
+#favs-link-dissapear{
+    color: white;
+    font-size: 1px;
+    text-decoration: none;
 }
+#favs-link-dissapear a:hover{
+    color: white;
+    font-size: 1px;
+    text-decoration: none;
+}
+#favs-link-dissapear a:visited{
+    color: white;
+    font-size: 1px;
+    text-decoration: none;
+}
+
+
+
+
+    .nav-tabs a{
+        width: 38vw;
+        color: #C40505;
+
+    }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    background-color: #C40505;
+    color: white;
+}
+
+    /*.nav-tabs > li.active > a:visited{*/
+        /*background-color: #fcfcfc;*/
+        /*color: #C40505;*/
+        /*border-radius: 10px;*/
+        /*border: 1px solid #C40505;*/
+        /*border-bottom: none;*/
+    /*}*/
+    /*.nav-tabs > li.active > a:hover{*/
+        /*background-color: #fcfcfc;*/
+        /*color: #C40505;*/
+        /*border-radius: 10px;*/
+        /*border: 1px solid #C40505;*/
+        /*border-bottom: none;*/
+    /*}*/
+
+    /*.nav-tabs > li > a{*/
+        /*background-color: #fcfcfc;*/
+        /*color: #C40505;*/
+        /*border-radius: 10px;*/
+        /*border: 1px solid #C40505;*/
+        /*border-bottom: none;*/
+    /*}*/
+
+/*charts*/

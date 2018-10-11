@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <h2>Create Post</h2>
-    <form method="post" action="/posts" class="create">
+    <form  enctype="multipart/form-data" method="post" action="/posts" class="create">
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" placeholder="enter title" class="form-control">
@@ -78,7 +78,7 @@
         <div class="form-group">
             <label for="exampleFormControlFile1">Upload an image</label>
 
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <input name="file" type="file" class="form-control-file" >
         </div>
 
 

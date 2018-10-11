@@ -10,7 +10,11 @@
             <div class="col-md-8 col-md-offset-2">
 
                     <div class="page-header">
-                    <h2>Listings currently available </h2>
+                    @if(Request::url() ==='/usersposts/{user_id}')
+                        <h2>i am working</h2>
+                    @else
+                            <h2>Listings currently available </h2>
+                    @endif
                 </div>
                 @forelse ($posts as $post)
                     <div class="panel panel-default">
@@ -21,19 +25,21 @@
 
                         <div class="panel-body">
 
-                            @if($post->property_type ==='House')
-                                <img src="/images/house.jpeg">
-                            @elseif($post->property_type ==='Flat')
-                                <img src="/images/flat.jpg">
-                            @elseif($post->property_type ==='Land')
-                                <img src="/images/land1.jpeg">
-                            @elseif($post->property_type ==='Bungalow')
-                                <img src="/images/bungalow.jpg">
-                            @elseif($post->property_type ==='Commercial')
-                                <img src="/images/commercial.jpeg">
-                            @else
-                                <img src="/images/house.jpeg">
-                            @endif
+
+        <img src="{{$post->image_pathway}}">
+                            {{--@if($post->property_type ==='House')--}}
+                                {{--<img src="/images/house.jpeg">--}}
+                            {{--@elseif($post->property_type ==='Flat')--}}
+                                {{--<img src="/images/flat.jpg">--}}
+                            {{--@elseif($post->property_type ==='Land')--}}
+                                {{--<img src="/images/land1.jpeg">--}}
+                            {{--@elseif($post->property_type ==='Bungalow')--}}
+                                {{--<img src="/images/bungalow.jpg">--}}
+                            {{--@elseif($post->property_type ==='Commercial')--}}
+                                {{--<img src="/images/commercial.jpeg">--}}
+                            {{--@else--}}
+                                {{--<img src="/images/house.jpeg">--}}
+                            {{--@endif--}}
 
                             <ul>
 

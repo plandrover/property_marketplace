@@ -29,6 +29,7 @@ class CreatePostsTable extends Migration
             $table->text('description');
             $table->string('image_pathway')->nullable();
             $table->timestamps();
+            $table->string('image')->nullable();
 
 
         });

@@ -52,15 +52,21 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        //return $request->title;
-        //Post::create($request);
 
-//        $input = $request->all();
-//        $input['title'] = $request->title;
-//
-//        Auth::user()->id;
-//        Post::create($request->all());
+        if ($request->hasFile('file')) {
+            $image=$request->file('file');
+            $imageName = $image->getClientOriginalName();
+            $uniqueName = md5($imageName . microtime());
+            $image->move(public_path('uploads'), $uniqueName);
+        } else {
+            return 'Cannot find file called';
+        }
+$path = '/uploads/';
+
+
+
+
+
         Post::create([
             'user_id' =>Auth::user()->id,
             'title' =>$request->title,
@@ -72,7 +78,7 @@ class PostController extends Controller
             'price' => $request->price,
             'commission' => $request->commission,
             'description' =>$request->description,
-            'image_path'=>$request->image_path,
+            'image_pathway'=>$path . $uniqueName,
         ]);
 
 //    $post = new Post;
@@ -108,6 +114,8 @@ class PostController extends Controller
     {
         //
 
+
+
         if(Auth::user()->role === 'sourcer'){
             $post = Post::findOrFail($id);
 
@@ -128,11 +136,29 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        if ($request->hasFile('file')) {
+            $image=$request->file('file');
+            $imageName = $image->getClientOriginalName();
+            $uniqueName = md5($imageName . microtime());
+            $image->move(public_path('uploads'), $uniqueName);
+        } else {
+            return 'Cannot find file called';
+        }
+        $path = '/uploads/';
+
         //first we find the id
         $post = Post::findOrFail($id);
 
         //then we grab and update the object
-        $post->update($request->all());
+        $post->update($request->all() + ['image_pathway' => $path . $uniqueName]);
+
+
+
+
+
+
+
 
         //return redirect to the page
         return redirect('/usersposts');

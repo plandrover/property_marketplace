@@ -27,7 +27,9 @@ class Post extends Model
         'bathrooms_no',
         'price',
         'commission',
-        'description'
+        'description',
+        'image_pathway',
+
     ];
 
     public function user() {

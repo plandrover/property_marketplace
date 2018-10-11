@@ -6,7 +6,7 @@
 
     <div class="container">
         <h2>Edit post</h2>
-        <form method="post" action="/posts/{{$post->id}}" class="create">
+        <form  enctype="multipart/form-data" method="post" action="/posts/{{$post->id}}" class="create">
             <input type="hidden" name="_method" value="PUT">
             <div class="form-group">
                 <label for="title">Edit Title</label>
@@ -77,6 +77,11 @@
                 <label for="description">Description</label>
                 <textarea class="form-control" name="description" rows="3"
                           placeholder="extra details...">{{$post->description}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Upload an image</label>
+
+                <input name="file" type="file" class="form-control-file" >
             </div>
 
 
